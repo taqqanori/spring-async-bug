@@ -15,12 +15,14 @@ public class AsyncService {
 		// just declared, never called
 	}
 
-	public void nonFinal() {
-		System.out.println("async non-final: " + value);
+	public final void _final() {
+		// becomes null
+		System.out.println("async final: " + value);
 	}
 
-	public final void _final() {
-		System.out.println("async final: " + value);
+	public void nonFinal() {
+		// becomes "demo"
+		System.out.println("async non-final: " + value);
 	}
 
 }

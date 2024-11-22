@@ -24,10 +24,10 @@ public class DemoController {
 	public ResponseEntity<String> handle(String body,
 			HttpMethod method, HttpServletRequest request, HttpServletResponse response) {
 
-		nonAsyncService.nonFinal();
-		nonAsyncService._final();
-		asyncService.nonFinal();
 		asyncService._final();
+		asyncService.nonFinal();
+		nonAsyncService._final();
+		nonAsyncService.nonFinal();
 
 		return ResponseEntity.ok("ok: see the log");
 	}
